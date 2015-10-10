@@ -1,9 +1,134 @@
 <html>
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width maximum-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/jquery.maximage.css?v=1.2" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="css/screen.css?v=1.2" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.cycle.all.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.maximage.js" type="text/javascript" charset="utf-8"></script>
 <title>
 </title>
 </head>
 <body>
-Grupo Elipse
+
+  <div id="logo">
+    <img src="logo.png"/>
+  </div>
+
+  <div id="maximage">
+    <img src="man.jpg" alt="Proyecto 1_DF_2010 " width="1400" height="1050" />
+    <img src="oldladyb.jpg" alt="Proyecto 2_DF_2011" width="1400" height="1050" />
+    <img src="oldmanb.jpg" alt="Proyect 3_CHIAPAS_2012" width="1400" height="1050" />
+  </div>
+
+<div id="menu">
+<ul id="menuElements">
+  <li><a href="javascript:void(0)">QUIÉNES SOMOS</a></li>
+  <li><a href="javascript:void(0)">PROYECTOS EN VENTA</a></li>
+  <li><a href="javascript:void(0)">PROYECTOS CONCLUIDOS</a></li>
+  <li><a href="javascript:void(0)">PRÓXIMOS PROYECTOS</a></li>
+  <li><a href="javascript:void(0)">CONTACTO</a></li>
+</ul>
+</div>
+
+<div id="menuMobile">
+  <div id="btnMenuMobile"><i class="fa fa-bars fa-3x"></i></div>
+<ul id="menuElementsMobile">
+  <li><a href="javascript:void(0)">QUIÉNES SOMOS</a></li>
+  <li><a href="javascript:void(0)">PROYECTOS EN VENTA</a></li>
+  <li><a href="javascript:void(0)">PROYECTOS CONCLUIDOS</a></li>
+  <li><a href="javascript:void(0)">PRÓXIMOS PROYECTOS</a></li>
+  <li><a href="javascript:void(0)">CONTACTO</a></li>
+</ul>
+</div>
+
+<div id="container">
+
+<div id="circuloVerde">
+  <div id="cedulaProyInicial">
+    <span class="TcedulaProyInicial">Nombre Proyecto</span><br>
+    <span class="TcedulaDatosProyecto">LUGAR DEL PROYECTO, 2014<br></span>
+    <hr>
+    <a id="flechaIzq" href="javascript:void(0)"><i class="fa fa-caret-left fa-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="flechaDer" href="javascript:void(0)"><i class="fa fa-caret-right fa-2x"></i></a>
+  </div>
+</div>
+
+<div id="circuloBlanco">
+  ffdfldkmvdlfkmvdf
+</div>
+
+</div>
+
+<div id="footer">
+  <ul id="footerElements">
+    <li><a href="javascript:void(0)"><i class="fa fa-facebook fa-2x"></i></a></li>
+    <li><a href="javascript:void(0)"><i class="fa fa-twitter fa-2x"></i></a></li>
+    <li><a href="javascript:void(0)"><i class="fa fa-instagram fa-2x"></i></a></li>
+  </ul>
+</div>
 </body>
+
+<script>
+
+$(function(){
+  // Trigger maximage
+  jQuery('#maximage').maximage({
+    cycleOptions: {
+      fx: 'fade',
+      speed: 1000, // Has to match the speed for CSS transitions in jQuery.maximage.css (lines 30 - 33)
+      timeout: 5000,
+      prev: '#flechaIzq',
+      next: '#flechaDer',
+      pause: 0,
+      before: function(last,current){
+        var cedula = $( current ).attr('title').split( "_" );
+        $( ".TcedulaProyInicial" ).html( cedula[0] );
+        $( ".TcedulaDatosProyecto" ).html( cedula[1] + ", " + cedula[2] + "<br>" );
+          //console.log( $( current ).attr("title") );
+      },
+      after: function(last,current){
+          //console.log( $( current ).attr("title") );
+      }
+    }
+  });
+});
+
+$( document ).ready( function(){
+  if( $( window ).width() > 850 ){
+  $( "#circuloVerde" ).css( "height", $( "#circuloVerde" ).width() );
+  $( "#circuloBlanco" ).css( "font-size", $( "#circuloBlanco" ).width() / 10 );
+  $( "#circuloBlanco" ).css( "padding-top", ( $( "#circuloBlanco" ).width() / 2 ) - ( $( "#circuloBlanco" ).width() / 20 ) );
+  $( "#circuloBlanco" ).css( "height", $( "#circuloBlanco" ).width() -  $( "#circuloBlanco" ).css("padding-top").replace(/[^-\d\.]/g, '') );
+  $( "#cedulaProyInicial" ).css( "height", $( "#circuloVerde" ).height()/3.5  );
+  $( "#cedulaProyInicial" ).css( "width", $( "#circuloVerde" ).width()/2  );
+}else{
+  $( "#circuloVerde" ).css( "height", $( "#circuloVerde" ).width() );
+}
+
+  $( "#btnMenuMobile" ).click( function(){
+    $( "#menuElementsMobile" ).slideToggle();
+  });
+
+});
+
+$( window ).resize( function(){
+  if( $( window ).width() > 850 ){
+  $( "#circuloVerde" ).css( "height", $( "#circuloVerde" ).width() );
+  $( "#circuloBlanco" ).css( "height", $( "#circuloBlanco" ).width() );
+  $( "#circuloBlanco" ).css( "font-size", $( "#circuloBlanco" ).width() / 10 );
+  $( "#circuloBlanco" ).css( "padding-top", ( $( "#circuloBlanco" ).width() / 2 ) - ( $( "#circuloBlanco" ).width() / 20 ) );
+  $( "#circuloBlanco" ).css( "height", $( "#circuloBlanco" ).width() -  $( "#circuloBlanco" ).css("padding-top").replace(/[^-\d\.]/g, '') );
+  $( "#cedulaProyInicial" ).css( "height", $( "#circuloVerde" ).height()/3.5  );
+  $( "#cedulaProyInicial" ).css( "width", $( "#circuloVerde" ).width()/2  );
+}else{
+  $( "#circuloVerde" ).css( "height", $( "#circuloVerde" ).width() );
+}
+});
+</script>
+
 </html>

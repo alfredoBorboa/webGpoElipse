@@ -1,0 +1,141 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width maximum-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/jquery.maximage.css?v=1.2" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="css/screen.css?v=1.2" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.cycle.all.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.maximage.js" type="text/javascript" charset="utf-8"></script>
+<title>
+</title>
+</head>
+<body>
+
+  <div id="maximage">
+    <img src="man.jpg" alt="Proyecto 1_DF_2010 " width="1400" height="1050" />
+    <img src="oldladyb.jpg" alt="Proyecto 2_DF_2011" width="1400" height="1050" />
+    <img src="oldmanb.jpg" alt="Proyect 3_CHIAPAS_2012" width="1400" height="1050" />
+  </div>
+
+<div id="menu">
+
+  <div id="logo2">
+    <img src="logoTexto.png"/>
+  </div>
+
+<ul id="menuElements2">
+  <li><a href="javascript:void(0)">QUIÉNES SOMOS</a></li>
+  <li><a href="javascript:void(0)">PROYECTOS EN VENTA</a></li>
+  <li><a href="javascript:void(0)">PROYECTOS CONCLUIDOS</a></li>
+  <li><a href="javascript:void(0)">PRÓXIMOS PROYECTOS</a></li>
+  <li><a href="javascript:void(0)">CONTACTO</a></li>
+</ul>
+</div>
+
+<div id="menuMobile">
+  <div id="logo2">
+    <img src="logoTexto.png"/>
+  </div>
+  <div id="btnMenuMobile"><i class="fa fa-bars fa-3x"></i></div>
+<ul id="menuElementsMobile">
+  <li><a href="javascript:void(0)">QUIÉNES SOMOS</a></li>
+  <li><a href="javascript:void(0)">PROYECTOS EN VENTA</a></li>
+  <li><a href="javascript:void(0)">PROYECTOS CONCLUIDOS</a></li>
+  <li><a href="javascript:void(0)">PRÓXIMOS PROYECTOS</a></li>
+  <li><a href="javascript:void(0)">CONTACTO</a></li>
+</ul>
+</div>
+
+<div id="container">
+  <div id="cedulaFooter">
+    <div id="cycle-nav"><ul style="margin-top:10px;"></ul></div>
+    <div id="cedulaSeccionTitulo">Proyecto 1</div>
+    <div id="cedulaSeccionData">Lugar, 2014</div>
+    <div id="proyFlechaIzq"><a href="javascript:void(0)"><i class="fa fa-caret-left fa-2x"></i></a></div>
+    <div id="proyFlechaDer"><a href="javascript:void(0)"><i class="fa fa-caret-right fa-2x"></i></a></div>
+    <div id="proyFlechaAba"><a href="javascript:void(0)" id="muestraInfoProyecto"><i class="fa fa-caret-down fa-2x"></i></a></div>
+  </div>
+
+<div id="infoProyecto">
+  <div id="textoProyecto">
+    <div id="headerTextoProyecto">
+      <a href="javascript:void(0)" id="escondeInfoProyecto"><i class="fa fa-caret-up fa-2x"></i></a>
+    </div>
+    <div id="colIzquierdaTexto">
+      <div class="parrafo">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum maximus nulla nec consectetur. Donec a nisl tempor, volutpat sem at, tincidunt lorem. Duis vitae ex vitae orci aliquet rutrum vel in diam. Etiam eget pulvinar nisl. Suspendisse vulputate iaculis congue. Praesent purus nunc, accumsan sit amet vehicula non, fringilla sed libero. In venenatis luctus arcu sit amet porta. Aenean tempor augue dui, in lacinia justo sollicitudin at.
+        <div id="circCompartir">
+        </div>
+    </div>
+    </div>
+    <div id="colDerechaTexto">
+      <div class="parrafo">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum maximus nulla nec consectetur. Donec a nisl tempor, volutpat sem at, tincidunt lorem. Duis vitae ex vitae orci aliquet rutrum vel in diam. Etiam eget pulvinar nisl. Suspendisse vulputate iaculis congue. Praesent purus nunc, accumsan sit amet vehicula non, fringilla sed libero. In venenatis luctus arcu sit amet porta. Aenean tempor augue dui, in lacinia justo sollicitudin at. Ut vel lorem et arcu elementum tincidunt vitae eget sapien. Nullam congue venenatis arcu finibus condimentum.
+
+  Praesent non tellus tempus, sodales libero sed, maximus lacus. Aenean viverra porta lacus. Etiam porttitor quam sapien, in lobortis purus mollis eget. Aliquam porttitor orci et sagittis ultricies. Nunc fringilla lobortis ligula vel bibendum. Aliquam sodales dolor et sapien consectetur porttitor. Donec ac nisi tortor. Maecenas mollis nulla in dui ultricies tristique. Sed facilisis aliquam tortor vitae dapibus. Sed ornare nunc ac tellus ultricies semper. Fusce euismod euismod massa, eu congue ex auctor feugiat. Nullam enim nisi, venenatis sit amet elit quis, elementum mollis massa. Vestibulum vehicula magna sit amet velit rutrum, non lacinia erat tincidunt. Nulla commodo odio ipsum, eget sollicitudin libero dignissim et. Maecenas risus lorem, blandit eget est nec, consectetur posuere ligula. Suspendisse porta varius odio vel accumsan.
+    </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+
+<script>
+
+$(function(){
+  // Trigger maximage
+  jQuery('#maximage').maximage({
+    cycleOptions: {
+      fx: 'fade',
+      speed: 1000, // Has to match the speed for CSS transitions in jQuery.maximage.css (lines 30 - 33)
+      timeout: 5000,
+      prev: '#proyFlechaIzq',
+      next: '#proyFlechaDer',
+      pause: 0,
+      pager: '#cycle-nav ul',
+      pagerAnchorBuilder: function(idx, slide) {
+                var imgsrc = jQuery.Slides[idx].url;
+                return '<li style="display:inline-block;margin:0 5px 0 5px;"><a href="#" rel="nofollow"><div style="width:10px;height:10px;border-radius:5px"></div></a></li>';
+            },
+      before: function(last,current){
+        var cedula = $( current ).attr('title').split( "_" );
+        $( ".TcedulaProyInicial" ).html( cedula[0] );
+        $( ".TcedulaDatosProyecto" ).html( cedula[1] + "<br>" + cedula[2] + "<br>" );
+          //console.log( $( current ).attr("title") );
+      },
+      after: function(last,current){
+          //console.log( $( current ).attr("title") );
+      }
+    }
+  });
+});
+
+$( document ).ready( function(){
+
+  $( "#muestraInfoProyecto" ).click( function(){
+    $( "#infoProyecto" ).slideToggle();
+    $( "#cedulaFooter" ).fadeToggle();
+  });
+
+  $( "#escondeInfoProyecto" ).click( function(){
+    $( "#infoProyecto" ).slideToggle();
+    $( "#cedulaFooter" ).fadeToggle();
+  });
+
+  $( "#btnMenuMobile" ).click( function(){
+    $( "#menuElementsMobile" ).slideToggle();
+  });
+
+});
+
+$( window ).resize( function(){
+});
+</script>
+
+</html>
